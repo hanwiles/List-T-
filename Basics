@@ -1,0 +1,24 @@
+var names = new List<string> {"Hannah", "Alabama", "Montana"};
+foreach(var name in names)
+{
+    //With the $ character, you can embed C# code in the string declaration
+    //In this example, you embedded the "ToUpper()" method, changing and outputting
+    //each name in the list names to UPPERCASE and printing them to the console
+    Console.WriteLine($"Hello {name.ToUpper()}!");
+}
+
+Console.WriteLine();
+names.Add("Nico");
+names.Add("Puerto Rico");
+names.Remove("Montana");
+foreach(var name in names)
+{
+    Console.WriteLine($"Hello {name.ToUpper()}!");
+}
+
+Console.WriteLine();
+Console.WriteLine($"My name is {names[0]}.");
+Console.WriteLine($"I've added {names[2]} and {names[3]} to the list.");
+
+Console.WriteLine();
+Console.WriteLine($"The number of names we have is {names.Count}");
