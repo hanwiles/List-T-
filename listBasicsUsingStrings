@@ -22,3 +22,24 @@ Console.WriteLine($"I've added {names[2]} and {names[3]} to the list.");
 
 Console.WriteLine();
 Console.WriteLine($"The number of names we have is {names.Count}");
+
+//The IndexOf method searches fro an item and returns the index of that item
+//int a list... this is useful if you need to find elements in a larger collection, 
+//perhaps a list that is thousands deep.
+Console.WriteLine();
+var index = names.IndexOf("Alabama");
+if(index != -1)
+{
+    Console.WriteLine($"The name {names[index]} is at index {index}");
+}
+
+var notFound = names.IndexOf("Not Found");
+Console.WriteLine($"When an items is not found, IndexOf returns {notFound}");
+
+//The Sort method sorts all the items in the list in their normal order
+Console.WriteLine();
+names.Sort();
+foreach(var name in names)
+{
+    Console.WriteLine($"Hello {name}!");
+}
