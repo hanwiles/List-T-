@@ -1,0 +1,20 @@
+var fibonacciNumbers = new List<int>{1, 1};
+//This creates a list of integers, and sets the first two integers to the value 1
+
+for(int i = 0; i < 18; i++)
+{
+    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
+    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
+
+    fibonacciNumbers.Add(previous + previous2);
+}
+
+foreach(var item in fibonacciNumbers)
+{
+    Console.WriteLine(item);
+}
+//Mine spits out two extra numbers because the first two indexes of the List are
+//already set with 1, 1
+//So I have to set my for-loop to only running 18 times
+
+//They used a while loop with the condition fibonacciNumbers.Count < 20
